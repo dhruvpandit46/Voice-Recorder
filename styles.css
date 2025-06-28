@@ -1,0 +1,171 @@
+/* 🌌 Universal Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0e0e1a, #1b1e31);
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* 🧱 App Container */
+#app {
+  width: 95%;
+  max-width: 720px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 1s ease-out;
+}
+
+/* 🎙️ Header */
+#header h1 {
+  font-size: 2.8rem;
+  background: linear-gradient(90deg, #00f260, #0575e6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(0, 255, 128, 0.2);
+}
+
+/* 🎛️ Controls */
+#controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+button {
+  font-size: 1.1rem;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#start-recording {
+  background: linear-gradient(135deg, #34d058, #28a745);
+}
+
+#stop-recording {
+  background: linear-gradient(135deg, #ffc107, #ffca28);
+}
+
+#save-recording {
+  background: linear-gradient(135deg, #1495ff, #007bff);
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/* 🔊 Waveform */
+#waveform-container {
+  height: 180px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.05);
+  margin-bottom: 30px;
+}
+
+#waveform {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* 🎵 Saved Recordings */
+#recordings-container {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+#recordings-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #00f260;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.recording-card {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 15px 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  transition: 0.3s ease;
+}
+
+.recording-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+}
+
+audio {
+  width: 60%;
+  border-radius: 6px;
+}
+
+.recording-card button {
+  background: #333;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #fff;
+  transition: 0.3s ease;
+  border: none;
+}
+
+.recording-card button:hover {
+  background: #00f260;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* 🌀 Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

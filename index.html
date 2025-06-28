@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Recorder V3.0</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="header">
+            <h1>🎙️ Voice Recorder</h1>
+        </div>
+        <div id="controls">
+            <button id="start-recording">Start Recording</button>
+            <button id="stop-recording" disabled>Stop Recording</button>
+            <button id="save-recording" disabled>Save Recording</button>
+        </div>
+        <div id="waveform-container">
+            <canvas id="waveform"></canvas>
+        </div>
+        <div id="recordings-container">
+            <h2>Your Saved Recordings</h2>
+            <div id="recordings"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
